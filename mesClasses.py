@@ -27,13 +27,13 @@ class VerifyCoup:
                        [0][0]) - (list(zip(*np.where(grille == str(sump))))[0][0]))
         if mouvement_pion[choix_pion] == 0 and test_pos == 2:
             deplacement = 2
-            mouvement_pion[choix_pion] += 2  # traiter erreur
+            mouvement_pion[choix_pion] += 2  
         elif mouvement_pion[choix_pion] >= 1 and test_pos >= 2:
             print("mauvais déplacement vous avez le droit d'avancer que une fois\n")
             deplacement = -1
         elif test_pos < 2:
             deplacement = 1
-            mouvement_pion[choix_pion] += 1  # traiter erreur
+            mouvement_pion[choix_pion] += 1  
         else:
             deplacement = -1
         return deplacement
@@ -216,7 +216,7 @@ class VerifyCoup:
         else:
             print("mauvais deplacement\n")
             return -1
-    # regler la tour
+    
 
     def _verify_depla_tour(self, choice_user, grille,
                            choix_pion, pion_manger, player_pseudo, pion_user):
